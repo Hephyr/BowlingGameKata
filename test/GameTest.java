@@ -27,7 +27,7 @@ class GameTest {
 
     @Test
     public void testOneStrike() {
-        game.roll(10);
+        rollStrike();
         game.roll(3);
         game.roll(4);
         assertEquals(24, game.score());
@@ -42,5 +42,9 @@ class GameTest {
     private void rollSpare() {
         game.roll(5);
         game.roll(5);
+    }
+
+    private void rollStrike() {
+        game.roll(10);
     }
 }
